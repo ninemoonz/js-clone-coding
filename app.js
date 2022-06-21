@@ -1,32 +1,14 @@
-function sumFunc(a, b) {
-    console.log(a + b);
+const age = parseInt(prompt("How old are you?"));
+
+if(isNaN(age)){
+    console.log("That's not a number. Enter your age again");
 }
-
-sumFunc(11, 22);
-sumFunc(12, 14);
-sumFunc(1223, 1214);
-sumFunc(1223, 1214125);
-
-const calc = {
-    sum: function(a, b) {
-        console.log(a + b);
-    },
-    subt: function(a, b) {
-        console.log(a - b)
-    },
-    mult: function(a, b) {
-        console.log(a * b)
-    },
-    div: function(a, b){
-        console.log(a / b)
-    },
-    pow: function(a, b){
-        console.log(a**b)
-    },
-};
-
-calc.sum(10, 132);
-calc.subt(30, 21);
-calc.mult(3, 5);
-calc.div(10, 34);
-calc.pow(2, 2);
+else if(age <= 18){
+    console.log("You are underage to buy liquors");
+}
+else if(age >= 18 && age <= 50){
+    console.log("You are okay to buy liquors");
+}
+else {
+    console.log("You can drink, but you should be careful");
+}
