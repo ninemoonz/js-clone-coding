@@ -1,14 +1,28 @@
-const h1 = document.querySelector(".grabClass h1");
+const loginForm = document.getElementById("login-form");
+const loginInput = loginForm.querySelector("input");
+const greeting = document.querySelector("#greeting");
 
-function handleMouseClick() {
-    const currentColor = h1.style.color;
-    let newColor;
-    if(currentColor === "blue"){
-        newColor = "tomato";
-    } else {
-        newColor = "blue";
-    }
-    h1.style.color = newColor;
+const HIDDEN_CLASSNAME = "hidden";
+const USERNAME_KEY = "username"
+
+function onLoginSubmit(event) {
+    event.preventDefault();
+    loginForm.classList.add(HIDDEN_CLASSNAME);
+    const username = loginInput.value;
+    localStorage.setItem(USERNAME_KEY, username);
+    paintGreetings(username);
 }
 
-h1.addEventListener("click", handleMouseClick);
+function paintGreetings(username) {
+    greeting.innerText = `Hello ${username}`;
+    greeting.classList.remove(HIDDEN_CLASSNAME);
+}
+
+const storedUsername = localStorage.getItem(USERNAME_KEY);
+
+if(storedUsername === null){
+    loginForm.classList.remove(HIDDEN_CLASSNAME);
+    loginForm.addEventListener("submit", onLoginSubmit);
+}else {
+    paintGreetings(storedUsername);
+}
