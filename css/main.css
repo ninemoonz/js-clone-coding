@@ -1,0 +1,26 @@
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main--column {
+    height: 600px;
+    width: 200px;
+    background-color: rgba(255, 255, 255, 0.192);
+    border-radius: 20px;
+}
+
+#login-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#greeting {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    
+}

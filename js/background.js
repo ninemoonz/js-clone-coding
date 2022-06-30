@@ -5,10 +5,12 @@ const images = [
 ];
 
 const chosenImg = images[Math.floor(Math.random() * images.length)];
+const backgroundDiv = document.getElementById("background__img");
 
 const bgImg = document.createElement("img"); //Created HTML tag with javaScript
 
-bgImg.src = `bgi/${chosenImg}`;
-console.log(bgImg);
+const bgDiv = document.getElementById("background__img");
 
-document.body.appendChild(bgImg);
+bgImg.src = `bgi/${chosenImg}`;
+
+bgDiv.appendChild(bgImg);
