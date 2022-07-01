@@ -18,8 +18,8 @@
       </div>
     </header>
     <main>
-      <div class="main--column login">
-        <form class="hidden" id="login-form">
+      <div class="main--column">
+        <form class="hidden login--section" id="login-form">
           <input
             required
             maxlength="15"
@@ -31,12 +31,9 @@
         <h1 id="greeting" class="hidden"></h1>
       </div>
       <div class="main--column todo">
+        <h1 class="todo--title">To Do List</h1>
         <form id="todo-form">
-          <input
-            type="text"
-            placeholder="Write things to do and press enter"
-            required
-          />
+          <input type="text" placeholder="Write things to do" required />
         </form>
         <ul id="todo-list"></ul>
       </div>

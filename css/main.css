@@ -3,50 +3,100 @@ main {
     justify-content: center;
     align-items: center;
     margin-top: 50px;
-    position: fixed
-    
 }
-
 .main--column {
     display: flex;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 30px;
     height: 500px;
     width: 300px;
-    background-color: rgba(255, 255, 255, 0.192);
     border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.147);
     box-shadow: inset -1px -1px 10px rgb(255, 255, 255);
     margin: 0px 5px;
     transition: background-color, height, width 0.5s ease-in-out;
 }
-.main--column:nth-child(2) {
-    transition: width 0.7s ease-in-out;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.main--column:nth-child(odd):hover {
+.main--column:hover {
     background-color: rgba(255, 255, 255, 0.534);
     height: 550px;   
     width: 330px;
 }
 
-.main--column:nth-child(2):hover {
-    width: 80vw;
-    height: 550px;
-    background-color: rgba(255, 255, 255, 0.534);
+.todo--title {
+    color:white; 
+    font-size: 30px;
+    font-weight: 600;
+    text-shadow: rgba(0, 0, 0, 0.854) 1px 0 10px;
 }
-
-#login-form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.weather {
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    text-shadow: rgba(0, 0, 0, 0.854) 1px 0 10px;
+}
+.weather span {
+    display: block;
 }
 
 #greeting {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    
+    font-size: 30px;
+    color: white;
+    font-weight: 600;
+    text-shadow: rgba(0, 0, 0, 0.854) 1px 0 10px;
 }
+
+.login--section {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#login-form input:first-child{
+    display: block;
+    border: none;
+    outline: none;
+    padding: 10px 10px;
+    border-radius: 15px;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    box-shadow: inset -1px -1px 5px rgba(113, 113, 113);
+}
+
+#login-form input:last-child{
+    border: none;
+    outline: none;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px 10px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.854);
+    box-shadow: inset -1px -1px 5px rgba(113, 113, 113);
+    margin-top: 10px;
+}
+
+#todo-form input {
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    border: none;
+    outline: none;
+    padding: 10px 10px;
+    border-radius: 15px;
+    margin-top: 20px;
+    box-shadow: inset -1px -1px 5px rgba(113, 113, 113);
+    background-color:rgba(255, 255, 255);
+}
+
+#todo-list {
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+    margin: 20px;
+}
+
