@@ -6,7 +6,6 @@ main {
 }
 .main--column {
     display: flex;
-    flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
@@ -42,6 +41,7 @@ main {
 }
 
 #greeting {
+    display: block;
     font-size: 30px;
     color: white;
     font-weight: 600;
@@ -78,6 +78,60 @@ main {
     background-color: rgba(255, 255, 255, 0.854);
     box-shadow: inset -1px -1px 5px rgba(113, 113, 113);
     margin-top: 10px;
+}
+
+.news--lock {
+    display: block;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    width: 200px;
+    margin: 50px;
+    line-height: 50px;
+    text-shadow: rgba(0, 0, 0, 0.854) 1px 0 10px;
+    animation: textBounce 1s ease-in-out infinite;
+}
+
+.news--container {
+    margin-top: 30px;
+    width: 270px;
+    height: 400px;
+    overflow-y: scroll;
+
+}
+
+.news--list {
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.news--list li {
+    margin-bottom: 20px;
+
+}
+.news--list li a {
+    text-decoration: none;
+    color: white;
+    text-shadow: rgba(0, 0, 0, 0.9) 1px 0 10px;
+    transition: all 0.5s ease-in-out;
+}
+
+.news--list li a:hover {
+    font-size: 18px;
+    font-style: underline;
+}
+
+@keyframes textBounce{
+    0%{
+        transform: none;
+    }
+    50%{
+        transform: scale(120%);
+    }
+    100%{
+        transform: none;
+    }
 }
 
 #todo-form input {
