@@ -43,15 +43,23 @@ const quotes = [
 
 const quote = document.querySelector("#quote span:first-child");
 const author = document.querySelector("#quote span:last-child");
+const headerPanel = document.querySelector("header");
 
 const quoteLength = quotes.length;
 const randInt = Math.random() * quoteLength;
 const randIntFloor = Math.floor(randInt);
 const todaysQuote = quotes[randIntFloor];
 
-console.log(todaysQuote);
 quote.innerText = todaysQuote.quote;
 author.innerText = todaysQuote.author;
+
+function headerClick() {
+    quote.innerText = todaysQuote.quote;
+    author.innerText = todaysQuote.author;
+}
+headerPanel.addEventListener("click", headerClick);
+
+
 /*
 const randIntRound = Math.round(randInt);
 const randIntCeil = Math.ceil(randInt);
