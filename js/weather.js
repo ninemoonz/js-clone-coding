@@ -13,10 +13,13 @@ function onGeoSuccess(position){
         city.innerText = data.name;
         weather.innerText = `${data.weather[0].main} / ${data.main.temp}`;
     }));
+    localStorage.setItem("latitude", latitude);
+    localStorage.setItem("longitude", longitude);
 }   
 function onGeoError(){
     alert("Can't find the current location");
 }
 
 navigator.geolocation.getCurrentPosition(onGeoSuccess, onGeoError);
+
 

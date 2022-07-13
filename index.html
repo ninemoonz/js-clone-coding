@@ -39,6 +39,7 @@
           <h1 class="news--lock hidden">Login and see news articles!</h1>
           <ul class="news--list"></ul>
         </form>
+        <span class="news--scroll">▾ Scroll down for more news ▾</span>
       </div>
 
       <div class="main--column todo">
@@ -48,11 +49,13 @@
         </form>
         <ul id="todo-list"></ul>
       </div>
+
       <div class="main--column weather">
         <div id="weather">
           <span></span>
           <span></span>
         </div>
+        <div id="map" style="width: 280px; height: 360px"></div>
       </div>
     </main>
     <footer></footer>
@@ -64,5 +67,30 @@
     <script src="js/todo.js"></script>
     <script src="js/weather.js"></script>
     <script src="js/news.js"></script>
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ed90567fc01aa33340f5a70740d0294d"
+    ></script>
+
+    <script>
+      var container = document.getElementById("map");
+
+      const mapLat = localStorage.getItem("latitude");
+      const mapLong = localStorage.getItem("longitude");
+
+      var options = {
+        center: new kakao.maps.LatLng(mapLat, mapLong),
+        level: 3,
+      };
+
+      var map = new kakao.maps.Map(container, options);
+
+      var markerPosition = options.center;
+      var marker = new kakao.maps.Marker({
+        position: markerPosition,
+      });
+
+      marker.setMap(map);
+    </script>
   </body>
 </html>
