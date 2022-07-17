@@ -6,7 +6,7 @@ const newsList = document.querySelector(".news--list");
 
 const newsArray = [];
 
-const url = `https://newsapi.org/v2/top-headlines?country=kr&apiKey=${NEWS_API}`;
+const url = `https://newsapi.org/v2/top-headlines?country=kr&sortBy=popularity&apiKey=${NEWS_API}`;
 
 const newsLock = document.querySelector(".news--lock");
 
