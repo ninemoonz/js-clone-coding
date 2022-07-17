@@ -1,0 +1,28 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    
+    color: white;
+    background: linear-gradient(#00000000, #000000fa, #474a71);
+    
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+    
+    line-height: 40px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+
+    padding: 20px 50px;
+}
+
+.footer  span:first-child{
+    font-size: 25px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}

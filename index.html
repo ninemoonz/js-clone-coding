@@ -30,10 +30,9 @@
         </form>
 
         <h1 id="greeting" class="hidden"></h1>
-
-        <form class="hidden logout--section" id="logout-form">
-          <input type="submit" class="logout" value="Logout" />
-        </form>
+        <div class="logout">
+          <input class="logoutBtn" type="button" value="logout">
+        </div>
 
         <form class="news--container">
           <h1 class="news--lock hidden">Login and see news articles!</h1>
@@ -57,8 +56,23 @@
         </div>
         <div id="map" style="width: 280px; height: 360px"></div>
       </div>
+
     </main>
-    <footer></footer>
+    <footer>
+      <div class="footer">
+        
+          <span> Done by PussInSocks </span>
+          <span>
+            <a href="https://github.com/ninemoonz">Go to github <i class="fa-brands fa-github"></i></a>
+          </span>
+          <span>
+            <a href="https://velog.io/@ninemoonz">Go to blog <i class="fa-solid fa-file-pen"></i></a>
+          
+        </div>
+
+      </div>
+
+    </footer>
     <div id="background__img"></div>
     <script src="js/greetings.js"></script>
     <script src="js/clock.js"></script>
@@ -67,6 +81,7 @@
     <script src="js/todo.js"></script>
     <script src="js/weather.js"></script>
     <script src="js/news.js"></script>
+    <script src="js/logout.js"></script>
     <script
       type="text/javascript"
       src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ed90567fc01aa33340f5a70740d0294d"
@@ -92,5 +107,6 @@
 
       marker.setMap(map);
     </script>
+  <script src="https://kit.fontawesome.com/57e41327d4.js" crossorigin="anonymous"></script>
   </body>
 </html>
